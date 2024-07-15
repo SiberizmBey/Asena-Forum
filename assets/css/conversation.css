@@ -1,0 +1,111 @@
+.message {
+    padding: 30px;
+    border-radius: 5px;
+    margin-bottom: 40px;
+    word-wrap: break-word; /* Metinlerin kutu içinde kalmasını sağlar */
+    overflow: hidden; /* Taşan içeriği gizler */
+    text-overflow: ellipsis; /* Taşan içeriği kesip "..." ekler */
+}
+
+.mes-post{
+    margin-bottom: 200px;
+}
+
+body.hacker-mode .sent-message,
+body.hacker-mode .received-message,
+body.hacker-mode .message-bar,
+body.hacker-mode .message-bar input,
+body.hacker-mode .message-bar button {
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border: 1px solid var(--border);
+}
+
+.sent-message {
+    background-color: var(--area);
+    text-align: right;
+}
+
+.received-message{
+    background-color: var(--area-alt);
+}
+
+.message-bar {
+    position: fixed;
+    bottom: 90px;
+    left: 50%;
+    border: 1px solid rgb(58,58,58);
+    transform: translateX(-50%);
+    width: calc(100% - 40px);
+    max-width: 800px;
+    background-color: var(--background);
+    padding: 10px;
+    border-radius: 100px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    height: 50px;
+    transition: bottom 0.3s ease; /* Animasyon ekleme */
+}
+
+.message-bar form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.message-bar textarea {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 100px;
+    margin: 0px;
+    height: 30px;
+    resize: none;
+    display: flex;
+    justify-content: center;
+    width: 100%; /* 90px is the approximate width of the button */
+}
+
+.message-bar button {
+    padding: 30px;
+    border: none;
+    border-radius: 100px;
+    background-color: var(--area);
+    color: var(--text-color);
+    cursor: pointer;
+    height: 30px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px; /* Adjusted width for better appearance */
+}
+
+.message-bar.hidden{
+    bottom: 10px;
+}
+
+@media (max-width: 1200px) {
+    .message-bar{
+        bottom: 100px;
+        max-width: 500px;
+        height: 20px;
+        padding: 20px 10px;
+    }
+
+    .message-bar textarea{
+        font-size: 15px;
+        padding: 5px;
+    }
+
+    .message-bar button{
+        padding: 2px;
+    }
+
+
+    .mes-post{
+        margin-bottom: 100px;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Asena Forum",
+  "short_name": "Asena",
+  "start_url": "https://asena.space/index.php",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "description": "Asena Forum - Siber Felsefesi",
+  "icons": [
+    {
+      "src": "assets/img/logo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}

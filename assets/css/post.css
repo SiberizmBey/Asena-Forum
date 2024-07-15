@@ -1,0 +1,144 @@
+body{
+    list-style: none;
+}
+
+.comment-content{
+    width: 100%;
+}
+
+.like_but{
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+textarea{
+    width: 100%;
+    background: var(--area);
+    margin-top: 40px;
+    color: var(--text-color);
+    border: none;
+    resize: none;
+    height: 200px;
+}
+
+hr{
+    color: #767676;
+}
+
+.comment {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: 0;
+}
+
+.comment.level-1 {
+    margin-left: 40px; /* 1. seviye alt yorumlar için kaydırma */
+}
+
+.send-com{
+    background: none;
+    padding: 10px 20px;
+    border-radius: 100px;
+}
+
+.solution{
+    background: var(--main-theme);
+    font-size: 7px;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+#solution{
+    margin-right: 10px;
+}
+
+#role{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.levels{
+    font-size: 10px;
+}
+
+.com-button,
+.mark-button{
+    margin-top: 20px;
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    background: none;
+    border-radius: 50px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.mark-button{
+    font-size: 10px;
+    border: none;
+}
+
+.like button{
+    background: none;
+}
+
+/* style.css */
+.like button.liked {
+    color: red;
+}
+
+
+
+li{
+    list-style: none;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    align-items: center;
+    width:85%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--area);
+}
+
+
+.link{
+    color: var(--main-theme);
+    word-wrap: break-word; /* Linklerin kutu içinde kalmasını sağlar */
+    white-space: normal; /* Linklerin taşmasını önler */
+    text-decoration: underline; /* Linklerin altını çizer */
+}
+
+@media (max-width: 1200px) {
+
+    textarea{
+        width: 91%;
+    }
+
+    .space{
+        margin-left: 0px;
+    }
+
+    #likeModal{
+        align-items: center;
+        height: 100%;
+    }
+
+    #likeModalContent{
+        position: relative;
+        top: 20%;
+        width: 50%;
+    }
+
+    #likeModalContent h2{
+        font-size: 60px;
+    }
+
+    #likeModalContent li{
+        list-style: none;
+        font-size: 40px;
+    }
+
+}

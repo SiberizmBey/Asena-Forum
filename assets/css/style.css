@@ -1,0 +1,848 @@
+@import url('https://fonts.googleapis.com/css2?family=Tiny5&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Niramit:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Orbitron:wght@400..900&display=swap');
+
+:root {
+    --text-color: #fff;
+    --text-alt-color: #c2c2c2;
+    --text-superalt-color: #787878;
+    --background: #101013;
+    --secondary-color: #1c1c1f;
+    --area: #242427;
+    --area-alt: #2f2f30;
+    --main-theme: #d82c54;
+    --border: #3A3A3AFF;
+
+}
+
+.light-theme {
+    --text-color: #000;
+    --text-alt-color: #555;
+    --text-superalt-color: #787878;
+    --background: #f7f7f7;
+    --secondary-color: #e1e1e1;
+    --main-theme: #007acc;
+    --area: #dcdcdc;
+    --area-alt: #b6b6b6;
+    --border: #c2c2c2FF;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--main-theme);
+    border-radius: 5px;
+}
+
+* {
+    color: var(--text-color);
+    text-decoration: none;;
+}
+
+body {
+    font-family: "Neometric", sans-serif;
+    background-color: var(--background);
+
+}
+
+body.hacker-mode {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url("https://i.hizliresim.com/2og4wvn.gif") no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+body.hacker-mode .posts {
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+}
+
+body.hacker-mode .li-mo {
+    display: none;
+}
+
+body.hacker-mode li {
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border: 1px solid var(--border);
+}
+
+.hacker-mode{
+    --text-color: #fff;
+    --text-alt-color: #c2c2c2;
+    --text-superalt-color: #787878;
+    --background: #101013;
+    --secondary-color: #1c1c1f;
+    --area: #242427;
+    --area-alt: #2f2f30;
+    --main-theme: #d82c54;
+    --border: #3A3A3AFF;
+}
+
+.light-theme #toggleButton{
+    display: none;
+}
+
+#toggleButton #solution{
+    margin-left: 20px;
+}
+
+body.light-theme {
+    font-family: "Neometric", sans-serif;
+    background-color: var(--background);
+
+}
+
+.solution {
+    background: var(--main-theme);
+    font-size: 7px;
+    padding: 3px 10px;
+    border-radius: 10px;
+}
+
+.user-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+    font-size: 10px;
+}
+
+.filter_system{
+    margin-top: 20px;
+}
+
+.main-content {
+    margin-top: 20px;
+}
+
+.user-info h1 {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.user-info .role {
+    margin-left: 10px;
+    background-color: var(--main-theme);
+    color: #fff;
+    padding: 2px 5px;
+    font-size: 10px;
+    border-radius: 10px;
+}
+
+#solution {
+    margin-right: 10px;
+}
+
+.annocuments {
+    background-color: var(--background);
+    padding: 1%;
+    margin-top: 50px;
+
+}
+
+.anno-post {
+    padding: 5%;
+    background-color: var(--secondary-color);
+    border: 1px solid var(--border);
+    border-radius: 10px
+}
+
+.other-cont {
+    margin-top: 100px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    /* Sayfanın tamamını kaplaması için */
+    box-sizing: border-box;
+    color: var(--text-color);
+    word-wrap: break-word; /* Metinlerin kutu içinde kalmasını sağlar */
+}
+
+.content h1 {
+    text-align: center;
+    /* Yazıların sola yaslanması için */
+    width: 100%;
+    /* İçeriklerin genişliği */
+    max-width: 800px;
+    /* İçeriklerin genişliği maksimum 800px olacak şekilde */
+}
+
+.content p {
+    color: var(--text-alt-color);
+}
+
+.posts {
+    background-color: var(--secondary-color);
+    margin-top: 5%;
+    margin-bottom: 5%;
+    min-width: 40%;
+    max-width: 40%;
+    padding: 2% 40px 5% 40px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden; /* Taşan içeriği gizler */
+    text-overflow: ellipsis; /* Taşan içeriği kesip "..." ekler */
+}
+
+.search-bar {
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 20px;
+    padding: 10px 15px;
+    display: flex;
+    gap: 10px;
+    color: #767676;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    width: 40%;
+    max-width: 11%;
+    z-index: 3;
+    transition: top 0.3s ease; /* Animasyon ekleme */
+}
+
+
+.bottom-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.profile-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    padding: 20px;
+    bottom: 130%; /* Open upwards */
+    background-color: transparent;
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 30px;
+    text-decoration: none;
+    display: block;
+    border-radius: 10px;
+    border: 1px solid transparent;
+}
+
+.dropdown-content a:hover {
+    border: 1px solid var(--main-theme);
+}
+
+.profile-dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.profile-dropdown:hover .profile-icon i {
+    color: var(--main-theme);
+}
+
+.bar-button {
+    margin: 0 5px;
+}
+
+.search-bar.hidden {
+    top: -100px;
+}
+
+.search-bar input,
+.search-bar button {
+    background: none;
+    border: none;
+    color: var(--text-color);
+    outline: none;
+}
+
+.search-bar input {
+    flex: 1;
+}
+
+
+.color-picker {
+    position: fixed;
+    top: 10px;
+    right: 1%;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 20px;
+    transition: right 0.3s ease; /* Animasyon ekleme */
+}
+
+.color-picker.hidden {
+    right: -100px;
+}
+
+
+.color-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.selected-color {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: inline-block;
+}
+
+.color-options {
+    display: none;
+    position: absolute;
+    top: 30px; /* Adjust the position if necessary */
+    left: 0;
+    background-color: var(--secondary-color, #333); /* Added a default fallback color */
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+}
+
+.color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    transition: border 0.3s;
+}
+
+.color-option:hover {
+    border: 2px solid white;
+}
+
+.color-dropdown.open .color-options {
+    display: block;
+}
+
+.colored {
+    color: var(--main-theme);
+}
+
+.com-button:hover,
+.mark-button:hover {
+    background: var(--main-theme);
+    color: var(--background);
+}
+
+.bar-button {
+    border-radius: 100%;
+    padding: 30px;
+}
+
+.custom-color-option {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    margin: 5px;
+    display: inline-block;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px dashed white;
+    position: relative;
+}
+
+.custom-color-option::before {
+    content: '+';
+    color: var(--text-color);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+/* Navbar ve gizleme butonu için temel stiller */
+.navbar {
+    position: fixed;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 100px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    transition: bottom 0.3s ease; /* Animasyon ekleme */
+    align-items: center;
+}
+
+.navbar.hidden {
+    bottom: -100px; /* Gizlemek için navbar'ı aşağıya taşı */
+}
+
+span.solution {
+    font-size: 10px;
+}
+
+.tabBar {
+    position: fixed;
+    top: 70px; /* Navbar'ın üstünde olacak şekilde konumlandır */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 3; /* Navbar'ın üstünde görünsün */
+    transition: top 0.3s ease; /* Animasyon ekleme */
+}
+
+.tabBar.hidden {
+    top: 10px;
+    opacity: 0.2;
+    transition: 0.3s ease; /* Animasyon ekleme */
+}
+
+.tabBar.hidden:hover {
+    opacity: 1;
+}
+
+.cat-title p {
+    color: var(--main-theme);
+}
+
+.calendar {
+    font-size: 11px;
+}
+
+.calendar #solution {
+    margin-left: 10px;
+}
+
+.calendar #views {
+    margin-right: 5px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 18px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 10px;
+}
+
+.navbar a:hover,
+.navbar a.active {
+    color: var(--main-theme);
+}
+
+.navbar a.active::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+.logo {
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    z-index: 2;
+    transition: left 0.3s ease; /* Animasyon ekleme */
+}
+
+.logo.hidden {
+
+    left: -100px;
+
+}
+
+.hamburger-menu {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 50%;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.hamburger-menu i {
+    font-size: 14px;
+    color: var(--text-color);
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 0;
+    height: 100vh;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    box-shadow: 30px 30px 30px black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.menu i {
+    font-size: 27px;
+    margin-top: 30px;
+    transition: all 0.3s;
+}
+
+.filter_system select,
+.filter_system button {
+    background: var(--secondary-color);
+    color: var(--text-alt-color);
+    border: none;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 60px;
+    border: 1px solid rgba(58, 58, 58, 1);
+    margin-right: 15px;
+}
+
+.filter_system button {
+    border-radius: 10px;
+}
+
+.menu i:hover {
+    color: var(--main-color);
+}
+
+.menu.open {
+    width: 180px;
+}
+
+.menu a {
+    color: var(--text-color);
+    font-size: 18px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    margin: 12px 0;
+}
+
+.menu a:hover::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    left: 100%;
+    margin-left: 8px;
+    color: var(--text-color);
+    padding: 4px 8px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.post_stats {
+    right: 0px;
+}
+
+.post_stats i {
+    margin-right: 5px;
+}
+
+.post_stats #solution {
+    margin-left: 20px;
+    color: var(--main-theme);
+}
+
+.post_stats #like {
+    color: var(--main-theme);
+}
+
+.left-menu {
+    position: fixed;
+    top: 60px;
+    left: 10px;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    border-radius: 20px;
+    padding: 15px;
+    display: none; /* Başlangıçta gizli */
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    z-index: 3;
+    color: var(--text-color);
+    width: 200px;
+}
+
+#toggle-menu-btn {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    border: 1px solid var(--border);
+    padding: 5px 10px;
+    background: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+    z-index: 4; /* Menüyü üstte tutmak için */
+    transition: left 0.3s ease; /* Animasyon ekleme */
+}
+
+#toggle-menu-btn.hidden {
+    left: -100px;
+}
+
+#toggle-menu-btn i:hover {
+    color: var(--main-theme);
+}
+
+#reset-btn,
+#toggle-theme-btn,
+#toggleButton{
+    border: 1px solid var(--border);
+    padding: 10px;
+    background: none;
+    border-radius: 50px;
+    font-size: 20px;
+    cursor: pointer;
+    background: rgba(28, 28, 31, var(--menu-opacity, 0.1));
+    backdrop-filter: blur(var(--menu-blur, 10px));
+}
+
+.left-menu label {
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.left-menu input[type="range"] {
+    width: 100%;
+    background: none;
+    border: none;
+    -webkit-appearance: none;
+    appearance: none;
+    outline: none;
+}
+
+.left-menu input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    background: var(--text-superalt-color);
+    border-radius: 5px;
+}
+
+.left-menu input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: var(--main-theme);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.left-menu input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: var(--main-theme);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* Sallanma animasyonu tanımı */
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0) translateY(0);
+    }
+    10%, 30%, 50%, 70% {
+        transform: translateX(-5px) translateY(-5px);
+    }
+    20%, 40%, 60% {
+        transform: translateX(5px) translateY(-5px);
+    }
+}
+
+/* Zil ikonuna hover olunduğunda sallanma animasyonu ekleme */
+.bell:hover {
+    animation: shake 1s;
+    animation-iteration-count: 1;
+}
+
+li {
+    list-style: none;
+    margin-top: 25px;
+    align-items: center;
+    width: 85%;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--area);
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 1200px) {
+    /* 1200px ve daha küçük ekranlar için */
+    .content {
+        max-width: 80%;
+        position: relative;
+        left: 10%;
+        top: 10px;
+        margin-bottom: 60px;
+    }
+
+    .posts {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 20px 20px;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        bottom: 250%; /* Open upwards */
+        right: 1%;
+        background-color: transparent;
+        backdrop-filter: blur(10px);
+        min-width: 100px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+    .search-bar {
+        max-width: 40%;
+    }
+
+    .search-bar input {
+        max-width: 100%;
+    }
+
+    .navbar {
+        margin-left: 40px;
+    }
+
+    .left-menu {
+        max-width: 200px;
+        top: 120px;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    /* 992px ve daha küçük ekranlar için */
+    .posts {
+        min-width: 60%;
+        max-width: 60%;
+    }
+
+    .search-bar {
+        width: 60%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    /* 768px ve daha küçük ekranlar için */
+    .posts {
+        min-width: 80%;
+        max-width: 80%;
+    }
+
+    .search-bar {
+        width: 80%;
+    }
+
+    .left-menu {
+        width: 80%;
+    }
+
+    #toggle-menu-btn {
+        font-size: 16px;
+        padding: 5px;
+    }
+
+    .navbar a {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 576px) {
+    /* 576px ve daha küçük ekranlar için */
+    .posts {
+        min-width: 95%;
+        max-width: 95%;
+    }
+
+    .search-bar {
+        width: 95%;
+    }
+
+    .left-menu {
+        width: 95%;
+    }
+
+    .navbar a {
+        font-size: 14px;
+    }
+
+    .hamburger-menu {
+        width: 30px;
+        height: 30px;
+    }
+
+    .hamburger-menu i {
+        font-size: 12px;
+    }
+}

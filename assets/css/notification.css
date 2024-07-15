@@ -1,0 +1,24 @@
+*{
+    list-style: none;
+}
+
+
+.noti{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--area);
+}
+
+li{
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background: var(--area);
+}
+
+.com-button{
+    margin-top: 50px;
+}

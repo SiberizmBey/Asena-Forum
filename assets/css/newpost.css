@@ -1,0 +1,32 @@
+.posts input,
+.posts textarea,
+.posts select{
+    background: none;
+    border: 1px solid rgb(58,58,58);
+    border-radius: 20px;
+}
+
+.posts{
+    align-items: center;
+}
+
+.posts .post-name,
+.posts .post-content{
+    width: 95%;
+    resize: none;
+
+}
+
+select{
+    padding: 10px 20px;
+}
+
+.post-name{
+    height: 50px;
+    padding: 1% 2%;
+}
+
+.post-content{
+    height: 300px;
+    padding: 1% 2%;
+}
