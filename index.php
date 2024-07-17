@@ -32,8 +32,16 @@ $conditions = [];
 
 $user_role = $_SESSION['role'];
 
+
+// Kullanıcı giriş yapmamışsa login sayfasına yönlendir
 if (!isset($_SESSION['user_id'])) {
     header("Location: login.php");
+    exit();
+}
+
+// Kullanıcı 2FA gerektiriyorsa ve doğrulanmamışsa verify_2fa sayfasına yönlendir
+if (isset($_SESSION['2fa_required']) && $_SESSION['2fa_required'] && (!isset($_SESSION['2fa_verified']) || !$_SESSION['2fa_verified'])) {
+    header("Location: verify_2fa.php");
     exit();
 }
 

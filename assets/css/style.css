@@ -189,7 +189,7 @@ body.light-theme {
 .posts {
     background-color: var(--secondary-color);
     margin-top: 5%;
-    margin-bottom: 5%;
+    margin-bottom: 10%;
     min-width: 40%;
     max-width: 40%;
     padding: 2% 40px 5% 40px;

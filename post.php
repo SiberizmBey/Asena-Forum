@@ -82,11 +82,12 @@ if ($user_id) {
 function make_links_clickable($text)
 {
     return preg_replace(
-        '/(https?:\/\/[^\s]+)/',
+        '/(https?:\/\/[^\s<]+)/',
         '<a href="$1" target="_blank" class="link">$1</a>',
         $text
     );
 }
+
 
 function display_comments($comments, $post, $comment_likes, $parent_comment_id = 0, $level = 0)
 {
